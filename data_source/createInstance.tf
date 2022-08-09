@@ -1,5 +1,5 @@
 
-data "aws_availability_zones" "avilable" {}
+data "aws_availability_zones" "available" {}
 
 data "aws_ami" "latest-ubuntu" {
   most_recent = true
@@ -15,7 +15,6 @@ data "aws_ami" "latest-ubuntu" {
     values = ["hvm"]
   }
 }
-
 
 resource "aws_instance" "MyFirstInstnace" {
   ami           = data.aws_ami.latest-ubuntu.id

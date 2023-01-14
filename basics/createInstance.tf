@@ -4,7 +4,7 @@ resource "aws_instance" "MyFirstInstnace" {
   instance_type = "t2.micro"
  
  tags = {
-   Name = "linuxmachine-${count.machine}"
+   Name = "linuxmachine-${count.index}"
  }
  
   }

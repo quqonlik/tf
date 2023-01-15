@@ -25,5 +25,4 @@ override.tf.json
 
 
 #AWS login creds
-
-
+terraform.tfvars 

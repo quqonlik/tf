@@ -20,6 +20,7 @@ data "aws_ami" "latest-ubuntu" {
 resource "aws_instance" "MyFirstInstnace" {
   ami           = data.aws_ami.latest-ubuntu.id
   instance_type = "t2.micro"
+  key_name      = aws_key_pair.levelup_key.key_name
   availability_zone = data.aws_availability_zones.available.names[1]
 
   provisioner "local-exec" {
@@ -29,6 +30,14 @@ resource "aws_instance" "MyFirstInstnace" {
   tags = {
     Name = "custom_instance"
   }
+
+ connection {
+    host        = coalesce(self.public_ip, self.private_ip)
+    type        = "ssh"
+    user        = var.INSTANCE_USERNAME
+    private_key = file(var.PATH_TO_PRIVATE_KEY)
+  }
+
 }
 
 output "public_ip" {

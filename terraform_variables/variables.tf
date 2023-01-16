@@ -19,5 +19,18 @@ variable "AMIS" {
         us-west-1 = "ami-01d9a63b83a0d25ee"
         us-west-2 = "ami-0688ba7eeeeefe3cd"
     }
-  
+
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "/tmp/levelup_key"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "/tmp/levelup_key.pub"
+}
+
+variable "INSTANCE_USERNAME" {
+  default = "ubuntu"
+}
+
+
 }

@@ -9,7 +9,7 @@ variable "Security_Group"{
     type = list
     default = ["sg-10001", "sg-10002", "sg-10003"]
 
-variable "AMIS" {
+variable "AMIS"{
     type = map
     default = {
         us-east-1 = ami-0b0ea68c435eb488d

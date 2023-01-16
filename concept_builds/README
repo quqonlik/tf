@@ -1,0 +1,2 @@
+ssh-keygen -f your.key.pub -e -m pem   (make sure you move to the directory where your key is located) 
+This command will help you to conver .pub to AWS accessible format type .pem

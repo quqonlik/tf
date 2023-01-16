@@ -1,6 +1,6 @@
 variable "AWS_ACCESS_KEY" {
     type = string
-    default = "AKIA4I3L325NNQ5HIZZE"
+    default = "AKIA4I3L325NLAUWVVXQ"
 }
 
 variable "AWS_SECRET_KEY" {}
@@ -17,19 +17,19 @@ variable "Security_Group"{
 variable "AMIS" {
     type = map
     default = {
-        us-east-1 = "ami-0f40c8f97004632f9"
-        us-east-2 = "ami-05692172625678b4e"
-        us-west-2 = "ami-0352d5a37fb4f603f"
-        us-west-1 = "ami-0f40c8f97004632f9"
+        us-east-1 = "ami-0b0ea68c435eb488d"
+        us-east-2 = "ami-05803413c51f242b7"
+        us-west-1 = "ami-01d9a63b83a0d25ee"
+        us-west-2 = "ami-0688ba7eeeeefe3cd"
     }
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "levelup_key"
+  default = "/tmp/levelup_key"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "levelup_key.pub"
+  default = "/tmp/levelup_key.pub"
 }
 
 variable "INSTANCE_USERNAME" {

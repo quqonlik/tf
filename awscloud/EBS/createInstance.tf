@@ -8,6 +8,7 @@ resource "aws_instance" "MyFirstInstnace" {
   instance_type = "t2.micro"
   key_name      = aws_key_pair.levelup_key.key_name
 }
+  
   tags = {
     Name = "custom_instance"
   }
@@ -17,7 +18,7 @@ resource "aws_ebs_volume" "ebs-volume-1" {
   availability_zone = "us-east-2a"
   size              = 50
   type              = "gp2"
-  
+
   tags = {
     Name = "Secondary Volume Disk"
   }

@@ -10,11 +10,11 @@ resource "aws_instance" "MyFirstInstnace" {
   instance_type = "t2.micro"
   availability_zone = "us-east-2a"
   key_name      = aws_key_pair.levelup_key.key_name
+}
 
   tags = {
     Name = "custom_instance"
   }
-}
 
 #EBS resource Creation
 resource "aws_ebs_volume" "ebs-volume-1" {

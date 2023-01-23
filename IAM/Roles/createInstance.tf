@@ -10,7 +10,7 @@ resource "aws_instance" "MyFirstInstnace" {
   availability_zone = "us-east-2a"
   key_name      = aws_key_pair.levelup_key.key_name
 
-  iam_instance_profile = aws_iam_instance_profile.s3-levelupbucket-role-instanceprofile.name
+  iam_instance_profile = aws_iam_instance_profile.s3_levelupbucket_role_instanceprofile.name
 
   tags = {
     Name = "custom_instance"

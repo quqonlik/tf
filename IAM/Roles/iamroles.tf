@@ -33,8 +33,8 @@ resource "aws_iam_role_policy" "s3_levelupmybucket_role_policy" {
               "s3:*"
             ],
             "Resource": [
-              "arn:aws:s3:::levelup-bucket-141",
-              "arn:aws:s3:::levelup-bucket-141/*"
+              "arn:aws:s3:::levelup-bucket-444",
+              "arn:aws:s3:::levelup-bucket-444/*"
             ]
         }
     ]
@@ -45,6 +45,6 @@ EOF
 
 #Instance identifier
 resource "aws_iam_instance_profile" "s3_levelupbucket_role_instanceprofile" {
-  name = "s3-levelupbucket-role"
+  name = "s3_levelupbucket_role"
   role = aws_iam_role.s3_levelupbucket_role.name
 }

@@ -1,11 +1,11 @@
 #Create AWS S3 Bucket
 
-resource "aws_s3_bucket" "levelup-s3bucket" {
-  bucket = "levelup-bucket-141"
+resource "aws_s3_bucket" "levelup_s3bucket" {
+  bucket = "levelup_bucket_141"
   acl    = "private"
 
   tags = {
-    Name = "levelup-bucket-141"
+    Name = "levelup_bucket_141"
   }
 }
 

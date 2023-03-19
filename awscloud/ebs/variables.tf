@@ -1,6 +1,6 @@
 variable "AWS_ACCESS_KEY" {
     type = string
-    default = "AKIA4I3L325NLAUWVVXQ"
+    default = "AKIA4I3L325NEPMSX5OU"
 }
 
 variable "AWS_SECRET_KEY" {}
